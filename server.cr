@@ -7,7 +7,6 @@ server = TCPServer.new("localhost", 2345)
 # loop infinitely, processing one incoming
 # connection at a time.
 loop do
-
   # Wait until a client connects, then return a TCPSocket
   # that can be used in a similar fashion to other Ruby
   # I/O objects. (In fact, TCPSocket is a subclass of IO.)
@@ -15,9 +14,6 @@ loop do
 
   # Read the first line of the request (the Request-Line)
   request = socket.gets
-
-  # Log the request to the console for debugging
-  STDERR.puts request
 
   response = "Hello World!\n"
 
