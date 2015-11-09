@@ -4,6 +4,9 @@ require "socket" # Provides TCPServer and TCPSocket classes
 # on localhost:2345 for incoming connections.
 server = TCPServer.new("localhost", 2345)
 
+max = ENV.fetch("MAX", "1").to_i
+i = 0
+
 # loop infinitely, processing one incoming
 # connection at a time.
 loop do
@@ -35,4 +38,7 @@ loop do
 
   # Close the socket, terminating the connection
   socket.close
+
+  i += 1
+  break if i == max
 end
