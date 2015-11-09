@@ -9,4 +9,4 @@ ab -n 1000 http://localhost:2345/
 ```
 
 Interestingly they both show very similar results. We means either Ruby is
-already very well optimized, or Crystal's optimizations aren't a good as thought.
+already very well optimized, or Crystal's optimizations aren't as good as thought.
